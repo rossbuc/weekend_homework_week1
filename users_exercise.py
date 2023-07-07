@@ -103,4 +103,9 @@ new_pet = {
 users["Erik"]["pets"].append(new_pet)
 
 # 10. Add another person to the users dictionary
-
+users["Lebowski"] = {
+    "twitter": "thedude",
+    "lottery_numbers": [13, 2, 5],
+    "home_town": "Los Angeles",
+    "pets": []
+}
