@@ -1,4 +1,5 @@
 from curses import erasechar
+from re import A
 
 
 users = {
@@ -75,6 +76,18 @@ erik_lottery_nums.sort()
 erik_smallest_number = erik_lottery_nums[0]
 
 # 6. Return an list of Avril's lottery numbers that are even
+avril_lottery_nums = users["Avril"]["lottery_numbers"]
+even_numbers = []
+for number in avril_lottery_nums:
+  if number % 2 == 0:
+    even_numbers.append(number)
+
+# ALTERNATE SOLUTION:
+# from itertools import filterfalse
+# even_numbers = [] 
+# for number in filterfalse(lambda y: y % 2, avril_lottery_nums):
+#   even_numbers.append(number)
+
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 # 8. Change Erik's hometown to Edinburgh
 # 9. Add a pet dog to Erik called "fluffy"
