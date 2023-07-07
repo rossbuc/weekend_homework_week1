@@ -1,3 +1,6 @@
+from curses import erasechar
+
+
 users = {
   "Jonathan": {
     "twitter": "jonnyt",
@@ -59,6 +62,8 @@ users = {
 jonathan_twitter_handle = users["Jonathan"]["twitter"]
 
 # 2. Get Erik's hometown
+erik_hometown = users["Erik"]["home_town"]
+print(erik_hometown)
 # 3. Get the list of Erik's lottery numbers
 # 4. Get the species of Avril's pet Monty
 # 5. Get the smallest of Erik's lottery numbers
