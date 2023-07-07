@@ -8,18 +8,21 @@ from itertools import filterfalse
 for number in filterfalse(lambda x : x % 2, numbers):
     even_numbers.append(number)
 
+print(even_numbers)
+
 # 2. Print the difference between the largest and smallest value:
 sorted_numbers = sorted(numbers)
 difference_between = sorted_numbers[len(numbers) - 1] - numbers[0]
 
 print(difference_between)
+
 # 3. Print True if the list contains a 2 next to a 2 somewhere.
 double_2 = False
-for x in range(0, len(numbers) - 1):
+for x in range(0, len(numbers)):
     if numbers[x] == 2 and numbers[x + 1] == 2:
         double_2 = True
 
-
+print(double_2)
 
 # 4. Print the sum of the numbers, 
 #    BUT ignore any section of numbers starting with a 6 and extending to the next 7.
@@ -40,6 +43,7 @@ for number in numbers:
     else:
         sum_not_6_to_7 += number
 
+print(sum_not_6_to_7)
 
 # 5. HARD! Print the sum of the numbers. 
 #    Except the number 13 is very unlucky, so it does not count.
@@ -48,8 +52,17 @@ for number in numbers:
 #
 #    So [5, 13, 2] would have sum of 5. 
 
+sum_unlucky_13 = 0
 
+for x in range(0, len(numbers)): 
+    if numbers[x] == 13:
+        continue
+    elif numbers[x - 1] == 13:
+        continue
+    else:
+        sum_unlucky_13 += numbers[x]
 
+print(sum_unlucky_13)
 
 
 
