@@ -18,7 +18,7 @@ print(difference_between)
 
 # 3. Print True if the list contains a 2 next to a 2 somewhere.
 double_2 = False
-for x in range(0, len(numbers)):
+for x in range(0, len(numbers) - 1):
     if numbers[x] == 2 and numbers[x + 1] == 2:
         double_2 = True
 
